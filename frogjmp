@@ -1,0 +1,20 @@
+// you can also use imports, for example:
+// import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+import java.util.*;
+
+class Solution {
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+        int result = 0;
+        if(X >= 1 && X <= 1000000000 && Y >= 1 && Y <= 1000000000 && D >= 1 && D <= 1000000000){
+            if(X<Y){
+                Y-=X;
+                result = Y%D != 0 ?  (int)Y/D+1 : (int)Y/D;
+            }
+        }
+        return result;
+    }
+}
